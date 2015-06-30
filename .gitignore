@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#client
+client/bower_components/
+client/node_modules/
