@@ -1,10 +1,9 @@
-from django.conf.urls import include, url
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from streamAPI import views as api_views
 
-urlpatterns = [
-    # Examples:
-    # url(r'^$', 'do2serv.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
+urlpatterns = patterns('',
+    url(r'^$',api_views.index),
+    url(r'^stream_api/(\d)/$',api_views.getStreamLisBySite),
     url(r'^admin/', include(admin.site.urls)),
-]
+)
