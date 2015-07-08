@@ -56,8 +56,8 @@ docs/_build/
 # PyBuilder
 target/
 
-#client
-client/bower_components/
-client/node_modules/
+#do2client
+do2client/bower_components/
+do2client/node_modules/
 
 do2serv/.idea/
