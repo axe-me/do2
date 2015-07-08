@@ -6,7 +6,7 @@ function LiveCtrl($scope, streamListFactory) {
 	angular.extend($scope, {
 	});
 
-	streamListFactory.getRawStreamListBySite('twitch')
+	streamListFactory.getRawStreamListBySite('huomao')
 		.success(function (data) {
 			console.log(data);
 		});
