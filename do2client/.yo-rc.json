@@ -33,12 +33,8 @@
         "module": "ui.router"
       },
       "ui": {
-        "key": "bootstrap",
-        "module": null
-      },
-      "bootstrapComponents": {
-        "key": "ui-bootstrap",
-        "module": "ui.bootstrap"
+        "key": "angular-material",
+        "module": "ngMaterial"
       },
       "cssPreprocessor": {
         "key": "node-sass",
@@ -52,6 +48,12 @@
       "htmlPreprocessor": {
         "key": "none",
         "extension": "html"
+      },
+      "bootstrapComponents": {
+        "name": null,
+        "version": null,
+        "key": null,
+        "module": null
       },
       "foundationComponents": {
         "name": null,
