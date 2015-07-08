@@ -1,6 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+[layout=row] {
+  flex-direction: row;
+}
 $lightBlack: #222;
 $darkBlack: #010101;
 $leftPanelWidth: 270px;
+
+html {
+	font-family: 'Roboto Slab', serif;
+}
 
 body {
 	background-color: $darkBlack;
