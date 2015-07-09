@@ -1,18 +1,9 @@
-.leftPanel {
-	background-color: rgba(255,0,0,0.5);
-	width: $leftPanelWidth;
-	height: 100vh;
-}
-
-.videoBox {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: rgba(0,255,0,0.5);
-	width: 100vw;
-	height: 100vh;
-
-	&.panelOpen {
-		margin-left: $leftPanelWidth;
+md-sidenav.md-locked-open {
+	&.leftPanel {
+		width: $leftPanelWidth;
+		max-width: $leftPanelWidth;
+		min-width: $leftPanelWidth;
+		background-color: #424242;
 	}
 }
+

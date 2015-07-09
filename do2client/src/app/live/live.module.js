@@ -2,7 +2,7 @@
 
 // available modules :
 // 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap
-angular.module('do2.live', ['ui.router', 'ngMaterial'])
+angular.module('do2.live', [])
 	.config(function ($stateProvider) {
 		$stateProvider
 			.state('live', {
