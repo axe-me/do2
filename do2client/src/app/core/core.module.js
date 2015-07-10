@@ -25,7 +25,7 @@ angular.module('do2.core', [])
 				.backgroundPalette('grey', {
 					'default': '600',
 					'hue-1': '500',
-					'hue-2': '700',
+					'hue-2': '800',
 					'hue-3': '900'
 				});
 	});

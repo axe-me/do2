@@ -8,12 +8,13 @@ angular.module('do2.live', [])
 		.state('live', {
 			url: '/',
 			views: {
-				'': {templateUrl: 'app/live/live-index.html'},
-				'leftPanel': {
-					template: 'leftPanel'
+				'': { templateUrl: 'app/live/live.index.html' },
+				'leftPanel@live': {
+					templateUrl: 'app/live/live.leftPanel.html',
+					controller: 'LiveListCtrl'
 				},
-				'streamContainer': {
-					template: '<h1>Hi</h1>'
+				'streamContainer@live': {
+					template: '<md-button>stream box</md-button>'
 				}
 			}
 		});

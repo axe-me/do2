@@ -1,0 +1,24 @@
+<header class="nav-header">
+	<div class="site-list" flex layout="row" layout-sm="column" layout-align="center center">
+		<md-button class="groupX left" ng-click="showStreamList('douyu')">DouYu</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('zhanqi')">ZhanQi</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('huomao')">HuoMao</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('huya')">Huya</md-button>
+		<md-button class="groupX right" ng-click="showStreamList('twitch')">Twitch</md-button>
+	</div>
+</header>
+
+<md-content class="md-hue-3" layout="column" layout-align="start center" layout-fill>
+	<md-card class="stream-card" ng-repeat="stream in streamList">
+		<img ng-src="{{ stream.img }}" class="md-card-image" alt="image caption">
+		<md-card-content layout="column">
+			<div layout="row" layout-align="space-between center">
+				<span><i class="material-icons md-14">person</i> {{ stream.anchor }}</span>
+				<span><i class="material-icons md-14">face</i> {{ stream.spectator_num }}</span>
+			</div>
+			<div>
+				<span><i class="material-icons md-14">play_circle_filled</i> {{ stream.title }}</span>
+			</div>
+		</md-card-content>
+	</md-card>
+</md-content>

@@ -12,12 +12,12 @@ angular.module('do2.core')
 	};
 
 	var streamListFactory = {
-		getRawStreamListBySite: getRawStreamListBySite
+		getStreamListBySite: getStreamListBySite
 	};
 
 	return streamListFactory;
 
-	function getRawStreamListBySite(siteKey){
+	function getStreamListBySite(siteKey){
 		return $http.jsonp(apiUrl[siteKey]);
 	}
 });

@@ -64,6 +64,6 @@ def twitchJson(raw):
 								'title': s['channel']['status'] or 'straming',
 								'img': s['preview']['medium'],
 								'site': 'twitch',
-								'spectator_num': s['channel']['views'],
+								'spectator_num': s['viewers'],
 								'channel_id': s['channel']['url']}
 	return { 'streams': [ stream_details(stream) for stream in data_set] }
