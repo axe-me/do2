@@ -5,9 +5,16 @@
 angular.module('do2.live', [])
 	.config(function ($stateProvider) {
 		$stateProvider
-			.state('live', {
-				url: '/',
-				templateUrl: 'app/live/live-index.html',
-				controller: 'LiveCtrl'
-			});
+		.state('live', {
+			url: '/',
+			views: {
+				'': {templateUrl: 'app/live/live-index.html'},
+				'leftPanel': {
+					template: 'leftPanel'
+				},
+				'streamContainer': {
+					template: '<h1>Hi</h1>'
+				}
+			}
+		});
 	});
