@@ -3,7 +3,11 @@ md-sidenav.md-locked-open {
 		width: $leftPanelWidth;
 		max-width: $leftPanelWidth;
 		min-width: $leftPanelWidth;
-		background-color: $grey-7;
+		background-color: $grey-4;
+		.streamList{
+			padding: 0px;
+			margin: 0px;
+		}
 	}
 }
 
@@ -11,9 +15,9 @@ md-sidenav.md-locked-open {
 	cursor: pointer;
 	width: 260px;
 	md-card-content {
-		font-size: 14px;
-		color: $grey-4;
-		background-color: $grey-2;
+		font-size: 12px;
+		color: $grey-1;
+		background-color: $grey-6;
 		padding: 2px 10px;
 		p {
 			margin: 0px;
@@ -22,12 +26,19 @@ md-sidenav.md-locked-open {
 }
 
 .stream-card:hover {
-	box-shadow: 0 0 8px white;
+	box-shadow: 0 0 8px $gold;
 }
 
-.site-list {
-	padding: 5px;
-	width: 270px;
-	background-color: $grey-7;
+.left-panel-header {
+	flex-shrink: 0;
+	z-index: 2;
+	.site-list {
+		padding: 5px;
+		width: 270px;
+		background-color: $grey-4;
+	}
 }
 
+.container {
+	height: 100vh;
+}

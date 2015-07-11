@@ -1,9 +1,7 @@
 <div layout="row" class="container">
-	<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z5 leftPanel" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-		<div ui-view="leftPanel"></div>
+	<md-sidenav class="md-sidenav-left md-whiteframe-z5 leftPanel" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')" ui-view="leftPanel">
 	</md-sidenav>
 
-	<md-content layout="column" flex class="md-hue-3">
-		<div ui-view="streamContainer"></div>
+	<md-content ui-view="streamContainer" role="navigation" flex class="md-hue-3">
 	</md-content>
 </div>

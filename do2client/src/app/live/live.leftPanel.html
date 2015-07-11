@@ -1,4 +1,4 @@
-<header class="nav-header">
+<header class="left-panel-header">
 	<div class="site-list" flex layout="row" layout-sm="column" layout-align="center center">
 		<md-button class="groupX left" ng-click="showStreamList('douyu')">DouYu</md-button>
 		<md-button class="groupX middle" ng-click="showStreamList('zhanqi')">ZhanQi</md-button>
@@ -8,8 +8,10 @@
 	</div>
 </header>
 
-<md-content class="md-hue-3" layout="column" layout-align="start center" layout-fill>
-	<md-card class="stream-card" ng-repeat="stream in streamList">
+<md-content layout="column" layout-align="start center">
+<ul class="streamList">
+	<li ng-repeat="stream in streamList">
+	<md-card class="stream-card" >
 		<img ng-src="{{ stream.img }}" class="md-card-image" alt="image caption">
 		<md-card-content layout="column">
 			<div layout="row" layout-align="space-between center">
@@ -21,4 +23,6 @@
 			</div>
 		</md-card-content>
 	</md-card>
+</li>
+</ul>
 </md-content>

@@ -24,6 +24,8 @@ $grey-5: #616161;
 $grey-6: #424242;
 $grey-7: #212121;
 
+$gold: #FFD700;
+
 $red-7: #B71C1C;
 $leftPanelWidth: 270px;
 
@@ -33,10 +35,6 @@ html {
 
 body {
   color: white;
-}
-
-.container {
-	height: 100vh;
 }
 
 .groupX {
@@ -70,7 +68,7 @@ body {
 }
 
 .md-button[disabled] {
-  color : rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.26);
   background-color: transparent;
 }
 
