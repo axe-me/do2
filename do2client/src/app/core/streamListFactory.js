@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('do2.core')
-.factory('streamListFactory', function($http) {
+.factory('streamListFactory', function($http, do2config) {
 
-	var server_root = 'http://127.0.0.1:8000';
+	var serverRoot = do2config.SERVER.DEV;
 
 	var apiUrl = {
-		douyu: server_root + '/stream_api/0/?callback=JSON_CALLBACK',
-		zhanqi: server_root + '/stream_api/1/?callback=JSON_CALLBACK',
-		huomao: server_root + '/stream_api/2/?callback=JSON_CALLBACK',
-		huya: server_root + '/stream_api/3/?callback=JSON_CALLBACK',
-		twitch: server_root + '/stream_api/4/?callback=JSON_CALLBACK'
+		douyu: serverRoot + '/stream_api/0/?callback=JSON_CALLBACK',
+		zhanqi: serverRoot + '/stream_api/1/?callback=JSON_CALLBACK',
+		huomao: serverRoot + '/stream_api/2/?callback=JSON_CALLBACK',
+		huya: serverRoot + '/stream_api/3/?callback=JSON_CALLBACK',
+		twitch: serverRoot + '/stream_api/4/?callback=JSON_CALLBACK'
 	};
 
 	var streamListFactory = {

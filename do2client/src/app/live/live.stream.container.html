@@ -1,0 +1,14 @@
+<div class="streamGrid">
+	<ul class="liveBoxList"
+		dnd-horizontal-list="true"
+		dnd-list="watchingList"
+		dnd-allowed-types="allowedDropType">
+		<li ng-repeat="box in watchingList"
+			dnd-draggable="box"
+			dnd-type="liveBox"
+			class="liveBox"
+			dnd-moved="watchingList.splice($index, 1)">
+			<p>{{ box }}</p>
+		</li>
+	</ul>
+</div>

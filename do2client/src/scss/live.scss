@@ -13,7 +13,11 @@ md-sidenav.md-locked-open {
 
 .stream-card {
 	cursor: pointer;
+	margin: 8px 0px;
 	width: 260px;
+	img {
+		-webkit-user-drag: none;
+	}
 	md-card-content {
 		font-size: 12px;
 		color: $grey-1;
@@ -41,4 +45,36 @@ md-sidenav.md-locked-open {
 
 .container {
 	height: 100vh;
+}
+
+/* Streaming content*/
+.streamGrid {
+	.liveBox {
+		background-color: $grey-6;
+		border: none;
+		border-radius: .25em;
+		color: #fff;
+		float: left;
+		font-weight: 700;
+		height: 50px;
+		margin: 5px;
+		padding: 3px;
+		text-align: center;
+		width: 50px;
+	}
+}
+
+ul[dnd-list], ul[dnd-list] > li {
+	position: relative;
+}
+
+.streamGrid ul[dnd-list] .dndPlaceholder {
+	display: block;
+	margin: 8px;
+	box-shadow: 0 0 8px $gold;
+	background-color: $grey-5;
+	min-height: 180px;
+	height: 180px;
+	width: 260px;
+	min-width: 260px;
 }

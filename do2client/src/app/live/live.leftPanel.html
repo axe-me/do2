@@ -8,21 +8,26 @@
 	</div>
 </header>
 
-<md-content layout="column" layout-align="start center">
-<ul class="streamList">
-	<li ng-repeat="stream in streamList">
-	<md-card class="stream-card" >
-		<img ng-src="{{ stream.img }}" class="md-card-image" alt="image caption">
-		<md-card-content layout="column">
-			<div layout="row" layout-align="space-between center">
-				<span><i class="material-icons md-14">person</i> {{ stream.anchor }}</span>
-				<span><i class="material-icons md-14">face</i> {{ stream.spectator_num }}</span>
-			</div>
-			<div>
-				<span><i class="material-icons md-14">play_circle_filled</i> {{ stream.title }}</span>
-			</div>
-		</md-card-content>
-	</md-card>
-</li>
-</ul>
+<md-content layout="column" layout-align="start center" class="streamContent">
+	<ul class="streamList" 
+		dnd-list="streamList"
+		dnd-allowed-types="allowedDropType"
+		>
+		<li ng-repeat="stream in streamList"
+			dnd-draggable="stream"
+			dnd-type="itemType">
+			<md-card class="stream-card" >
+				<img ng-src="{{ stream.img }}" class="md-card-image" alt="image caption">
+				<md-card-content layout="column">
+					<div layout="row" layout-align="space-between center">
+						<span><i class="material-icons md-14">person</i> {{ stream.anchor }}</span>
+						<span><i class="material-icons md-14">face</i> {{ stream.spectator_num }}</span>
+					</div>
+					<div>
+						<span><i class="material-icons md-14">play_circle_filled</i> {{ stream.title }}</span>
+					</div>
+				</md-card-content>
+			</md-card>
+		</li>
+	</ul>
 </md-content>

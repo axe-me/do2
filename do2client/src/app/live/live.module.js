@@ -14,7 +14,8 @@ angular.module('do2.live', [])
 					controller: 'LiveListCtrl'
 				},
 				'streamContainer@live': {
-					template: '<md-button>stream box</md-button>'
+					templateUrl: 'app/live/live.stream.container.html',
+					controller: 'StreamContainerCtrl'
 				}
 			}
 		});
