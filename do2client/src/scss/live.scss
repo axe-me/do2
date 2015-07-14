@@ -49,18 +49,17 @@ md-sidenav.md-locked-open {
 
 /* Streaming content*/
 .streamGrid {
-	.liveBox {
-		background-color: $grey-6;
-		border: none;
-		border-radius: .25em;
-		color: #fff;
-		float: left;
-		font-weight: 700;
-		height: 50px;
-		margin: 5px;
-		padding: 3px;
-		text-align: center;
-		width: 50px;
+	.liveBoxList {
+		padding: 0px;
+		margin: 0px; 
+		.liveBox {
+			background-color: $grey-6;
+			margin: 2px;
+			border-radius: .25em;
+			font-weight: 700;
+			height: 50px;
+			text-align: center;
+		}
 	}
 }
 
@@ -68,13 +67,10 @@ ul[dnd-list], ul[dnd-list] > li {
 	position: relative;
 }
 
-.streamGrid ul[dnd-list] .dndPlaceholder {
-	display: block;
-	margin: 8px;
-	box-shadow: 0 0 8px $gold;
-	background-color: $grey-5;
-	min-height: 180px;
-	height: 180px;
-	width: 260px;
-	min-width: 260px;
+.streamGrid .dndPlaceholder {
+	background-color: $gold;
+    height: 50px;
+    flex: 0 0 33.33%;
+    display: block;
+    position: relative;
 }

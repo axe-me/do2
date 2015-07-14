@@ -2,13 +2,15 @@
 	<ul class="liveBoxList"
 		dnd-horizontal-list="true"
 		dnd-list="watchingList"
-		dnd-allowed-types="allowedDropType">
-		<li ng-repeat="box in watchingList"
+		dnd-allowed-types="gridAllowedDropType"
+		layout="row"
+		layout-wrap>
+		<li flex="33"
+			ng-repeat="box in watchingList"
 			dnd-draggable="box"
-			dnd-type="liveBox"
-			class="liveBox"
+			dnd-type="itemType"
 			dnd-moved="watchingList.splice($index, 1)">
-			<p>{{ box }}</p>
+			<div class="liveBox">{{ box.label }}</div>
 		</li>
 	</ul>
 </div>
