@@ -5,12 +5,12 @@
 		dnd-allowed-types="gridAllowedDropType"
 		layout="row"
 		layout-wrap>
-		<li flex="33"
+		<li ng-class="boxStyle()"
 			ng-repeat="box in watchingList"
 			dnd-draggable="box"
 			dnd-type="itemType"
 			dnd-moved="watchingList.splice($index, 1)">
-			<div class="liveBox">{{ box.label }}</div>
+			<div class="liveBox">{{ box }}</div>
 		</li>
 	</ul>
 </div>
