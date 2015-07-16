@@ -13,8 +13,11 @@ angular.module('do2.core')
 		twitch: serverRoot + '/stream_api/4/?callback=JSON_CALLBACK'
 	};
 
+	var streamBoxList = [1];
+
 	var streamListFactory = {
-		getStreamListBySite: getStreamListBySite
+		getStreamListBySite: getStreamListBySite,
+		streamBoxList: streamBoxList
 	};
 
 	return streamListFactory;

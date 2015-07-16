@@ -6,16 +6,11 @@ function StreamContainerCtrl($scope, streamListFactory) {
 	angular.extend($scope, {
 		gridAllowedDropType: ['boxItem', 'streamItem'],
 		itemType: 'boxItem',
-		watchingList: [],
+		streamBoxList: streamListFactory.streamBoxList,
 		boxStyle: boxStyle
 	});
 
-	$scope.watchingList = [
-		{
-			"label": "Item 10"
-		}];
-
 	function boxStyle() {
-		return 'box-' + $scope.watchingList.length;
+		return 'box-' + $scope.streamBoxList.length;
 	}
 }

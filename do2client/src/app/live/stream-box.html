@@ -1,0 +1,45 @@
+
+<object ng-if="boxData.site == 'douyu'" 
+	type="application/x-shockwave-flash"
+	data="{{ ::getUrl() }}"
+	allowscriptaccess="always"
+	allowfullscreen="true"
+	height="100%"
+	width="100%"
+	allowfullscreeninteractive="true">
+</object>
+
+<iframe ng-if="boxData.site == 'zhanqi'"
+	width="100%"
+	height="100%"
+	src="{{ ::getUrl() }}"
+	frameborder="0"
+	allowfullscreen="true">
+</iframe>
+
+<iframe ng-if="boxData.site == 'huomao'"
+	height="100%"
+	width="100%"
+	src="{{ ::getUrl() }}"
+	frameborder="0"
+	allowfullscreen="true"
+	allowfullscreen="true">
+</iframe>
+
+<object ng-if="boxData.site == 'huya'" 
+	type="application/x-shockwave-flash"
+	data="{{ ::getUrl() }}"
+	allowscriptaccess="always"
+	allowfullscreen="true"
+	height="100%"
+	width="100%"
+	allowfullscreeninteractive="true">
+</object>
+
+<iframe ng-if="boxData.site == 'twitch'"
+	src="{{ ::getUrl() }}"
+	frameborder="0"
+	scrolling="no"
+	height="100%"
+	width="100%">
+</iframe>

@@ -28,4 +28,14 @@ angular.module('do2.core', [])
 					'hue-2': '800',
 					'hue-3': '900'
 				});
+	})
+	.config(function ($sceDelegateProvider) {
+		$sceDelegateProvider.resourceUrlWhitelist([
+			'self',
+			'http://staticlive.douyutv.com/**',
+			'http://www.zhanqi.tv/**',
+			'http://www.huomaotv.com/**',
+			'http://yy.com/s/**',
+			'http://www.twitch.tv/**'
+		]);
 	});
