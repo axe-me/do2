@@ -1,7 +1,9 @@
 {
   "name": "do2",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^3.10.0"
+  },
   "scripts": {
     "test": "gulp test"
   },

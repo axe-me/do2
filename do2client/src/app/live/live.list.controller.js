@@ -10,13 +10,13 @@ function LiveListCtrl($scope, streamListFactory) {
 		streamList: []
 	});
 
+	showStreamList('douyu');
+
 	function showStreamList(key) {
 		streamListFactory.getStreamListBySite(key)
 		.success(function (data) {
-			console.log(data.streams);
 			$scope.streamList = data.streams;
 		});
 	}
-	
 	
 }

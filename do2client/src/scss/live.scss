@@ -51,7 +51,9 @@ md-sidenav.md-locked-open {
 .streamGrid {
 	.liveBoxList {
 		padding: 0px;
-		margin: 0px; 
+		margin: 0px;
+		height: 100vh;
+		width:100%;
 		.liveBox {
 			background-color: $grey-6;
 			border: 1px $grey-4 solid;
@@ -59,86 +61,67 @@ md-sidenav.md-locked-open {
 			height: 100%;
 			display: block;
 		}
+
+		.dndPlaceholder {
+			background-color: $grey-5;
+			border: 2px dashed $gold;
+			display: block;
+			position: relative;
+		}
+
+		li:nth-child(1):nth-last-child(1) {
+			width: 100%;
+			height: 100vh;
+		}
+		/* placeholder style when already 2 streams */
+		li:first-child:nth-last-child(2),
+		li:first-child:nth-last-child(2) ~ li {
+			width: 49.8%;
+			height: 100vh;
+		}
+		/* placeholder style when already 3 streams */
+		li:first-child:nth-last-child(3),
+		li:first-child:nth-last-child(3) ~ li {
+			width: 49.8%;
+			height: 49.8vh;
+		}
+		/* placeholder style when already 4 streams */
+		li:first-child:nth-last-child(4),
+		li:first-child:nth-last-child(4) ~ li {
+			width: 49.8%;
+			height: 49.8vh;
+		}
+		/* placeholder style when already 5 streams */
+		li:first-child:nth-last-child(5),
+		li:first-child:nth-last-child(5) ~ li {
+			width: 49.8%;
+			height: 33.2vh;
+		}
+		/* placeholder style when already 6 streams */
+		li:first-child:nth-last-child(6),
+		li:first-child:nth-last-child(6) ~ li {
+			width: 49.8%;
+			height: 33.2vh;
+		}
+		/* placeholder style when already 7 streams */
+		li:first-child:nth-last-child(7),
+		li:first-child:nth-last-child(7) ~ li {
+			width: 33.2%;
+			height: 33.2vh;
+		}
+		/* placeholder style when already 8 streams */
+		li:first-child:nth-last-child(8),
+		li:first-child:nth-last-child(8) ~ li {
+			width: 33.2%;
+			height: 33.2vh;
+		}
+		/* placeholder style when already 9 streams */
+		li:first-child:nth-last-child(9),
+		li:first-child:nth-last-child(9) ~ li {
+			width: 33.2%;
+			height: 33.2vh;
+		}
+
 	}
-}
 
-.box-1 {
-	flex: 1;
-	height: 100vh; 
-}
-.box-2 {
-	flex: 0 0 50%;
-	height: 100vh;
-}
-.box-2 ~ .dndPlaceholder {
-	flex: 0 0 49.5%;
-	height: 99vh;
-}
-.box-3 {
-	flex: 0 0 50%;
-	height: 50vh;
-}
-.box-3 ~ .dndPlaceholder {
-	flex: 0 0 49.5%;
-	height: 49vh;
-}
-.box-4 {
-	flex: 0 0 50%;
-	height: 50vh;
-}
-.box-4 ~ .dndPlaceholder {
-	flex: 0 0 49.5%;
-	height: 49vh;
-}
-.box-5 {
-	flex: 0 0 50%;
-	height: 33.33vh;
-}
-.box-5 ~ .dndPlaceholder {
-	flex: 0 0 49.5%;
-	height: 33vh;
-}
-.box-6 {
-	flex: 0 0 50%;
-	height: 33.33vh;
-}
-.box-6 ~ .dndPlaceholder {
-	flex: 0 0 49.5%;
-	height: 33vh;
-}
-.box-7 {
-	flex: 0 0 33.33%;
-	height: 33.33vh;
-}
-.box-7 ~ .dndPlaceholder {
-	flex: 0 0 33%;
-	height: 33vh;
-}
-.box-8 {
-	flex: 0 0 33.33%;
-	height: 33.33vh;
-}
-.box-8 ~ .dndPlaceholder {
-	flex: 0 0 33%;
-	height: 33vh;
-}
-.box-9 {
-	flex: 0 0 33.33%;
-	height: 33.33vh;
-}
-.box-9 ~ .dndPlaceholder {
-	flex: 0 0 33%;
-	height: 33vh;
-}
-
-ul[dnd-list], ul[dnd-list] > li {
-	position: relative;
-}
-
-.streamGrid .dndPlaceholder {
-	background-color: $grey-5;
-	border: 2px dashed $gold;
-	display: block;
-	min-width: 25vw;
-	position: relative;
 }

@@ -38,4 +38,12 @@ angular.module('do2.core', [])
 			'http://yy.com/s/**',
 			'http://www.twitch.tv/**'
 		]);
-	});
+	})
+	.config(function($translateProvider) {
+		$translateProvider.useSanitizeValueStrategy('sanitize');
+		$translateProvider.useStaticFilesLoader({
+			prefix: 'i18n/',
+			suffix: '.json'
+		});
+		$translateProvider.preferredLanguage('en');
+});

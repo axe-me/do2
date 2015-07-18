@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 // Rules for sizing the icon.
@@ -30,7 +30,7 @@ $red-7: #B71C1C;
 $leftPanelWidth: 270px;
 
 html {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -39,6 +39,10 @@ body {
 
 ul {
 	list-style: none;
+}
+
+ul[dnd-list], ul[dnd-list] > li {
+	position: relative;
 }
 
 .groupX {

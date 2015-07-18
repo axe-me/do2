@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('do2.core')
-.factory('streamListFactory', function($http, do2config) {
+.factory('streamListFactory', function($http, $interval, do2config) {
 
 	var serverRoot = do2config.SERVER.DEV;
 
@@ -13,7 +13,7 @@ angular.module('do2.core')
 		twitch: serverRoot + '/stream_api/4/?callback=JSON_CALLBACK'
 	};
 
-	var streamBoxList = [1];
+	var streamBoxList = [];
 
 	var streamListFactory = {
 		getStreamListBySite: getStreamListBySite,

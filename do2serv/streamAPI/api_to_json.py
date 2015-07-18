@@ -34,7 +34,7 @@ def zhanqiJson(raw):
 								'img': s['bpic'],
 								'site': 'zhanqi',
 								'spectator_num': s['online'],
-								'channel_id': s['code']}
+								'channel_id': s['id']}
 	return { 'streams': [ stream_details(stream) for stream in data_set] }
 
 def huomaoJson(raw):
