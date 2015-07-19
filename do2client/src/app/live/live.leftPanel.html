@@ -1,5 +1,5 @@
 <header class="left-panel-header">
-	<div class="site-list" flex layout="row" layout-sm="column" layout-align="center center">
+	<div class="site-list" flex layout="row" layout-align="center center">
 		<md-button class="groupX left" ng-click="showStreamList('douyu')">{{'DOUYU' | translate }}</md-button>
 		<md-button class="groupX middle" ng-click="showStreamList('zhanqi')">{{'ZHANQI' | translate }}</md-button>
 		<md-button class="groupX middle" ng-click="showStreamList('huomao')">{{'HUOMAO' | translate }}</md-button>
@@ -31,3 +31,10 @@
 		</li>
 	</ul>
 </md-content>
+
+<footer class="left-panel-footer" layout="row" layout-align="space-around center">
+	<div class="langSwitcher" layout="row" layout-sm="column" layout-align="center center">
+		<md-button class="groupX left" ng-click="switchLang('zh')">中文</md-button>
+		<md-button class="groupX right" ng-click="switchLang('en')">English</md-button>
+	</div>
+</footer>

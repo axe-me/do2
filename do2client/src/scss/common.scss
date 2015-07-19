@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900|Montserrat:400,700);
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
 // Rules for sizing the icon.
@@ -52,7 +52,6 @@ ul[dnd-list], ul[dnd-list] > li {
     color: white;
     background-color: #B71C1C;
     text-transform: none;
-    font-weight: 400;
     min-height: 25px;
     max-height: 25px;
     min-width: 40px;

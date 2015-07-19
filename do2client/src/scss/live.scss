@@ -7,6 +7,32 @@ md-sidenav.md-locked-open {
 		.streamList{
 			padding: 0px;
 			margin: 0px;
+			min-height: 100vh;
+			font-weight: 900;
+		}
+	}
+	.left-panel-header {
+		flex-shrink: 0;
+		z-index: 2;
+		.site-list {
+			padding: 5px;
+			width: 270px;
+			background-color: $grey-4;
+		}
+	}
+
+	.left-panel-footer {
+		background-color: $grey-6;
+		flex-shrink: 0;
+		z-index: 2;
+		height: 30px;
+		
+		.langSwitcher{
+			.groupX {
+				background-color: #607D8B;
+				min-height: 18px;
+				line-height: 18px;
+			}
 		}
 	}
 }
@@ -33,18 +59,9 @@ md-sidenav.md-locked-open {
 	box-shadow: 0 0 8px $gold;
 }
 
-.left-panel-header {
-	flex-shrink: 0;
-	z-index: 2;
-	.site-list {
-		padding: 5px;
-		width: 270px;
-		background-color: $grey-4;
-	}
-}
-
 .container {
 	height: 100vh;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Streaming content*/

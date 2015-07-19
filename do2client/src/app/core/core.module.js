@@ -40,7 +40,7 @@ angular.module('do2.core', [])
 		]);
 	})
 	.config(function($translateProvider) {
-		$translateProvider.useSanitizeValueStrategy('sanitize');
+		$translateProvider.useSanitizeValueStrategy(null);
 		$translateProvider.useStaticFilesLoader({
 			prefix: 'i18n/',
 			suffix: '.json'
