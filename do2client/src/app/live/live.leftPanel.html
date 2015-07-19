@@ -1,0 +1,40 @@
+<header class="left-panel-header">
+	<div class="site-list" flex layout="row" layout-align="center center">
+		<md-button class="groupX left" ng-click="showStreamList('douyu')">{{'DOUYU' | translate }}</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('zhanqi')">{{'ZHANQI' | translate }}</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('huomao')">{{'HUOMAO' | translate }}</md-button>
+		<md-button class="groupX middle" ng-click="showStreamList('huya')">{{'HUYA' | translate }}</md-button>
+		<md-button class="groupX right" ng-click="showStreamList('twitch')">{{'TWITCH' | translate }}</md-button>
+	</div>
+</header>
+
+<md-content layout="column" layout-align="start center" class="streamContent">
+	<ul class="streamList" 
+		dnd-list="streamList"
+		dnd-allowed-types="allowedDropType"
+		>
+		<li ng-repeat="stream in streamList"
+			dnd-draggable="stream"
+			dnd-type="itemType">
+			<md-card class="stream-card" >
+				<img ng-src="{{ stream.img }}" class="md-card-image" alt="image caption">
+				<md-card-content layout="column">
+					<div layout="row" layout-align="space-between center">
+						<span><i class="material-icons md-14">person</i> {{ stream.anchor }}</span>
+						<span><i class="material-icons md-14">face</i> {{ stream.spectator_num }}</span>
+					</div>
+					<div>
+						<span><i class="material-icons md-14">play_circle_filled</i> {{ stream.title }}</span>
+					</div>
+				</md-card-content>
+			</md-card>
+		</li>
+	</ul>
+</md-content>
+
+<footer class="left-panel-footer" layout="row" layout-align="space-around center">
+	<div class="langSwitcher" layout="row" layout-sm="column" layout-align="center center">
+		<md-button class="groupX left" ng-click="switchLang('zh')">中文</md-button>
+		<md-button class="groupX right" ng-click="switchLang('en')">English</md-button>
+	</div>
+</footer>

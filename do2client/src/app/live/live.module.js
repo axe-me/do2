@@ -2,12 +2,21 @@
 
 // available modules :
 // 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ui.router', 'ui.bootstrap
-angular.module('do2.live', ['ui.router', 'ngMaterial'])
+angular.module('do2.live', [])
 	.config(function ($stateProvider) {
 		$stateProvider
-			.state('live', {
-				url: '/',
-				templateUrl: 'app/live/live-index.html',
-				controller: 'LiveCtrl'
-			});
+		.state('live', {
+			url: '/',
+			views: {
+				'': { templateUrl: 'app/live/live.index.html' },
+				'leftPanel@live': {
+					templateUrl: 'app/live/live.leftPanel.html',
+					controller: 'LiveListCtrl'
+				},
+				'streamContainer@live': {
+					templateUrl: 'app/live/live.stream.container.html',
+					controller: 'StreamContainerCtrl'
+				}
+			}
+		});
 	});

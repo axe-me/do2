@@ -1,23 +1,28 @@
 'use strict';
 
 angular.module('do2.core')
-.factory('streamListFactory', function($http) {
+.factory('streamListFactory', function($http, $interval, do2config) {
+
+	var serverRoot = do2config.SERVER.DEV;
 
 	var apiUrl = {
-		douyu: 'http://127.0.0.1:8000/stream_api/0/?callback=JSON_CALLBACK',
-		zhanqi: 'http://127.0.0.1:8000/stream_api/1/?callback=JSON_CALLBACK',
-		huomao: 'http://127.0.0.1:8000/stream_api/2/?callback=JSON_CALLBACK',
-		huya: 'http://127.0.0.1:8000/stream_api/3/?callback=JSON_CALLBACK',
-		twitch: 'http://127.0.0.1:8000/stream_api/4/?callback=JSON_CALLBACK'
+		douyu: serverRoot + '/stream_api/0/?callback=JSON_CALLBACK',
+		zhanqi: serverRoot + '/stream_api/1/?callback=JSON_CALLBACK',
+		huomao: serverRoot + '/stream_api/2/?callback=JSON_CALLBACK',
+		huya: serverRoot + '/stream_api/3/?callback=JSON_CALLBACK',
+		twitch: serverRoot + '/stream_api/4/?callback=JSON_CALLBACK'
 	};
 
+	var streamBoxList = [];
+
 	var streamListFactory = {
-		getRawStreamListBySite: getRawStreamListBySite
+		getStreamListBySite: getStreamListBySite,
+		streamBoxList: streamBoxList
 	};
 
 	return streamListFactory;
 
-	function getRawStreamListBySite(siteKey){
+	function getStreamListBySite(siteKey){
 		return $http.jsonp(apiUrl[siteKey]);
 	}
 });

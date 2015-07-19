@@ -1,8 +1,8 @@
 {
   "globalstrict": true,
   "bitwise": true,
-  "camelcase": true,
-  "curly": true,
+  "camelcase": false,
+  "curly": false,
   "devel": true,
   "eqeqeq": true,
   "indent": 4,

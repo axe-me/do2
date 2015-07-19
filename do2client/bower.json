@@ -9,8 +9,11 @@
     "jquery": "~2.1.1",
     "angular-resource": "~1.3.4",
     "angular-ui-router": "~0.2.13",
-    "angular-material": "~0.8.3",
-    "angular": "~1.3.4"
+    "angular-material": null,
+    "angular": "~1.3.4",
+    "angular-drag-and-drop-lists": "~1.2.0",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-static-files": "~2.7.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.3.4"

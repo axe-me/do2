@@ -1,20 +1,86 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,900|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-html {
-  font-family: 'Roboto Slab', serif;
-}
+// Rules for sizing the icon.
+.material-icons.md-14 { font-size: 14px; }
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
 
-[layout=row] {
-  flex-direction: row;
-}
+// Rules for using icons as black on a light background.
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
-$lightBlack: #222;
-$darkBlack: #010101;
+// Rules for using icons as white on a dark background.
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+$grey-1: #E0E0E0;
+$grey-2: #BDBDBD;
+$grey-3: #9E9E9E;
+$grey-4: #757575;
+$grey-5: #616161;
+$grey-6: #424242;
+$grey-7: #212121;
+
+$gold: #FFD700;
+
+$red-7: #B71C1C;
 $leftPanelWidth: 270px;
 
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
-  background-color: $darkBlack;
   color: white;
+}
+
+ul {
+	list-style: none;
+}
+
+ul[dnd-list], ul[dnd-list] > li {
+	position: relative;
+}
+
+.groupX {
+    font-size: 13px;
+    margin: 0px;
+    padding: 1px 3px;
+    color: white;
+    background-color: #B71C1C;
+    text-transform: none;
+    min-height: 25px;
+    max-height: 25px;
+    min-width: 40px;
+    line-height: 22px;
+}
+.md-button.left {
+    border-radius: 5px 0 0 5px;
+}
+.md-button.middle {
+    border-radius: 0;
+    border-left: 1px solid rgba(230, 230, 230, 0.96);
+}
+.md-button.right {
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid rgba(230, 230, 230, 0.96);
+}
+.md-button:not([disabled]):hover {
+    background-color: #FF8A80;
+    color: #37474F;
+    transition: 0.5s;
+}
+
+.md-button[disabled] {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+
+.material-icons, .icon-text {
+	vertical-align: middle;
 }
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
