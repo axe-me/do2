@@ -39,6 +39,11 @@ angular.module('do2.core', [])
 			'http://www.twitch.tv/**'
 		]);
 	})
+	.config(function(localStorageServiceProvider) {
+		localStorageServiceProvider
+		.setPrefix('do2')
+		.setNotify(true, true);
+	})
 	.config(function($translateProvider) {
 		$translateProvider.useSanitizeValueStrategy(null);
 		$translateProvider.useStaticFilesLoader({

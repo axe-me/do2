@@ -6,6 +6,7 @@
 angular.module('do2', ['ui.router',
 						'ngMaterial',
 						'ngSanitize',
+						'LocalStorageModule',
 						'pascalprecht.translate',
 						'dndLists',
 						'do2.core',

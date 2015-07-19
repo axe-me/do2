@@ -3,5 +3,6 @@ angular.module('do2.core')
 	'SERVER': {
 		DEV: 'http://127.0.0.1:8000',
 		PROD: ''
-	}
+	},
+	'FRESH_TIME': 180000
 });

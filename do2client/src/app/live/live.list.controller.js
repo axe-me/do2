@@ -2,7 +2,7 @@
 
 angular.module('do2.live').controller('LiveListCtrl', LiveListCtrl);
 
-function LiveListCtrl($scope, streamListFactory, localeFactory) {
+function LiveListCtrl($scope, streamListFactory, do2config, localeFactory, localStorageService) {
 	angular.extend($scope, {
 		allowedDropType: ['none'],
 		itemType: 'streamItem',
@@ -14,11 +14,24 @@ function LiveListCtrl($scope, streamListFactory, localeFactory) {
 
 	showStreamList('douyu');
 
+	function isFresh(time) {
+		return Date.now() - time < do2config.FRESH_TIME;
+	}
+
 	function showStreamList(key) {
-		streamListFactory.getStreamListBySite(key)
-		.success(function (data) {
-			$scope.streamList = data.streams;
-		});
+		var siteData = localStorageService.get(key);
+		if (siteData!==null && isFresh(siteData.lastUpdateTime)) {
+			$scope.streamList = siteData.data;
+		} else {
+			streamListFactory.getStreamListBySite(key)
+			.success(function (data) {
+				siteData = {};
+				siteData.lastUpdateTime = Date.now();
+				siteData.data = data.streams;
+				localStorageService.set(key, siteData);
+				$scope.streamList = data.streams;
+			});
+		}
 	}
 	
 }
