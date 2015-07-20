@@ -8,6 +8,7 @@ angular.module('do2', ['ui.router',
 						'ngSanitize',
 						'LocalStorageModule',
 						'pascalprecht.translate',
+						'ngLodash',
 						'dndLists',
 						'do2.core',
 						'do2.live']);
