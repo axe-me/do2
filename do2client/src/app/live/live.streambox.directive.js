@@ -14,15 +14,20 @@ angular.module('do2.live')
 });
 
 
-function streamBoxCtrl($scope) {
+function streamBoxCtrl($scope, streamListFactory) {
 
 	angular.extend($scope, {
-		getUrl: getUrl
+		getUrl: getUrl,
+		close: streamListFactory.remove
 	});
+
+	// function refresh(){
+	// 	var channel_id = $scope.boxData.channel_id;
+	// 	$scope.boxData.channel_id = channel_id + 1 - 1;
+	// }
 
 	function getUrl() {
 		var data = $scope.boxData;
-		console.log(data);
 		if (data.site === 'douyu')
 			return 'http://staticlive.douyutv.com/common/share/play.swf?room_id=' + data.channel_id;
 		else if (data.site === 'zhanqi') 
@@ -32,7 +37,7 @@ function streamBoxCtrl($scope) {
 		else if (data.site === 'huya') 
 			return 'http://weblbs.yystatic.com/s/'+data.channel_id+'/'+data.sub_channel+'/huyacoop.swf';
 		else
-			return data.channel_id + '/embed';
+			return data.channel_id + '/embed?wmode=transparent';
 	}
 
 }

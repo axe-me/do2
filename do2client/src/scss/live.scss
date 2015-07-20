@@ -13,6 +13,12 @@
 	z-index: 2;
 }
 
+.box-actions {
+	position: absolute;
+	left: 18%;
+	bottom: 10%;
+}
+
 .md-sidenav-left.md-closed, md-sidenav.md-closed {
 	display: none;
 	-webkit-transform: translate3d(-100%, 0, 0);

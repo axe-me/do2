@@ -1,4 +1,25 @@
 
+<div class="box-actions" layout="row" layout-align="center center">
+	<md-fab-speed-dial md-open="demo.isOpen" md-direction="up" class="md-scale">
+		<md-fab-trigger>
+			<md-button aria-label="actions" class="md-fab md-primary md-mini">
+				<i class="material-icons">eject</i>
+			</md-button>
+		</md-fab-trigger>
+		<md-fab-actions>
+			<md-button aria-label="close" class="md-fab md-accent md-mini" ng-click="close(boxData)">
+				<i class="material-icons">highlight_off</i>
+			</md-button>
+			<!-- <md-button aria-label="refresh" class="md-fab md-accent md-mini" ng-click="refresh()">
+				<i class="material-icons">autorenew</i>
+			</md-button> -->
+			<md-button aria-label="fullscreen" class="md-fab md-accent md-mini">
+				<i class="material-icons">fullscreen</i>
+			</md-button>
+		</md-fab-actions>
+	</md-fab-speed-dial>
+</div>
+
 <object ng-if="boxData.site == 'douyu'" 
 	type="application/x-shockwave-flash"
 	data="{{ ::getUrl() }}"
@@ -40,6 +61,7 @@
 	src="{{ ::getUrl() }}"
 	frameborder="0"
 	scrolling="no"
+	wmode="Opaque"
 	height="100%"
 	width="100%">
 </iframe>

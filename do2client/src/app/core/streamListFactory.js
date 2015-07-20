@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('do2.core')
-.factory('streamListFactory', function($http, $interval, $mdSidenav, do2config) {
+.factory('streamListFactory', function($http, lodash, $mdSidenav, do2config) {
 
 	var serverRoot = do2config.SERVER.DEV;
 
@@ -21,7 +21,8 @@ angular.module('do2.core')
 		streamBoxList: streamBoxList,
 		toggle: toggle,
 		isPanelOpen: $mdSidenav('left').isOpen,
-		openPanel: $mdSidenav('left').open
+		openPanel: $mdSidenav('left').open,
+		remove: remove
 	};
 
 	return streamListFactory;
@@ -33,4 +34,14 @@ angular.module('do2.core')
 	function toggle() {
 		$mdSidenav('left').toggle();
 	}
+
+	function remove(box) {
+		lodash.remove(streamListFactory.streamBoxList, function(n) {
+			if (box.site==='huya')
+				return box.channel_id === n.channel_id && box.sub_channel === n.sub_channel
+			else 
+				return box.site===n.site && box.channel_id === n.channel_id
+		});
+	}
+
 });
