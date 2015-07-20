@@ -7,8 +7,11 @@ function StreamContainerCtrl($scope, streamListFactory) {
 		gridAllowedDropType: ['boxItem', 'streamItem'],
 		itemType: 'boxItem',
 		streamBoxList: streamListFactory.streamBoxList,
-		isDropable: isDropable
+		isDropable: isDropable,
+		toggle: streamListFactory.toggle
 	});
+
+	streamListFactory.openPanel();
 
 	function isDropable() {
 		return $scope.streamBoxList.length === 9;

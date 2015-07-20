@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('do2.core')
-.factory('streamListFactory', function($http, $interval, do2config) {
+.factory('streamListFactory', function($http, $interval, $mdSidenav, do2config) {
 
 	var serverRoot = do2config.SERVER.DEV;
 
@@ -14,15 +14,23 @@ angular.module('do2.core')
 	};
 
 	var streamBoxList = [];
+	var isPanelOpen = false;
 
 	var streamListFactory = {
 		getStreamListBySite: getStreamListBySite,
-		streamBoxList: streamBoxList
+		streamBoxList: streamBoxList,
+		toggle: toggle,
+		isPanelOpen: $mdSidenav('left').isOpen,
+		openPanel: $mdSidenav('left').open
 	};
 
 	return streamListFactory;
 
 	function getStreamListBySite(siteKey){
 		return $http.jsonp(apiUrl[siteKey]);
+	}
+
+	function toggle() {
+		$mdSidenav('left').toggle();
 	}
 });
