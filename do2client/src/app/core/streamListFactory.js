@@ -14,13 +14,11 @@ angular.module('do2.core')
 	};
 
 	var streamBoxList = [];
-	var isPanelOpen = false;
 
 	var streamListFactory = {
 		getStreamListBySite: getStreamListBySite,
 		streamBoxList: streamBoxList,
 		toggle: toggle,
-		isPanelOpen: $mdSidenav('left').isOpen,
 		openPanel: $mdSidenav('left').open,
 		remove: remove
 	};
@@ -38,9 +36,9 @@ angular.module('do2.core')
 	function remove(box) {
 		lodash.remove(streamListFactory.streamBoxList, function(n) {
 			if (box.site==='huya')
-				return box.channel_id === n.channel_id && box.sub_channel === n.sub_channel
+				return box.channel_id === n.channel_id && box.sub_channel === n.sub_channel;
 			else 
-				return box.site===n.site && box.channel_id === n.channel_id
+				return box.site===n.site && box.channel_id === n.channel_id;
 		});
 	}
 
