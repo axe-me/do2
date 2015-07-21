@@ -3,7 +3,7 @@
 angular.module('do2.core')
 .factory('streamListFactory', function($http, lodash, $mdSidenav, do2config) {
 
-	var serverRoot = do2config.SERVER.DEV;
+	var serverRoot = do2config.SERVER.PROD;
 
 	var apiUrl = {
 		douyu: serverRoot + '/stream_api/0/?callback=JSON_CALLBACK',
