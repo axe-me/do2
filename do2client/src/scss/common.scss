@@ -33,6 +33,10 @@ html {
   font-family: 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
   color: white;
 }
