@@ -1,0 +1,6 @@
+<uwsgi>
+    <socket>:9630</socket>
+    <module>do2serv.wsgi</module>
+    <processes>10</processes>
+    <daemonize>uwsgi.log</daemonize>
+</uwsgi>
