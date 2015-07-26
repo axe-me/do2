@@ -1,2 +1,2 @@
-# do2
-to do or do two? this is a project
+# DotaOnly v2
+Website URL: dotaonly.com
